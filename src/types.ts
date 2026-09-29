@@ -66,3 +66,19 @@ export interface DonationFormValues {
   item: DonationItem | ''
   observacoes: string
 }
+
+export type DonationStatus = 'pendente' | 'contatado' | 'concluido'
+
+export interface Donation {
+  id: string
+  nomeCompleto: string
+  whatsapp: string
+  tipos: DonationItem[]
+  observacoes: string | null
+  status: DonationStatus
+  createdAt: string
+}
+
+export type DonationPayload = Pick<Donation, 'nomeCompleto' | 'whatsapp' | 'tipos'> & {
+  observacoes?: string
+}
