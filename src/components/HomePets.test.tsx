@@ -18,6 +18,7 @@ const pets: Pet[] = [
     vacinado: true,
     vermifugado: true,
     castrado: false,
+    adotado: false,
   },
 ]
 
