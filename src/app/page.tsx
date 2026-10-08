@@ -17,7 +17,8 @@ import { BASE_OPEN_GRAPH, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/si
 
 async function PetsFromServer() {
   const pets = await fetchPetsServer()
-  return <HomePets initialPets={pets} />
+  const availablePets = pets?.filter((pet) => !pet.adotado) || null
+  return <HomePets initialPets={availablePets} />
 }
 
 function JoinGroupButton() {
