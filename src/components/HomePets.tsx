@@ -42,7 +42,7 @@ export default function HomePets({ initialPets }: HomePetsProps) {
   })
   return (
     <>
-      <div className="w-full [@media(min-width:1100px)]:order-1 order-1">
+      <div   ref={focus} tabIndex={-1} className="w-full [@media(min-width:1100px)]:order-1 order-1">
         <h1 className="text-(--text-color)">Adotar um animal:</h1>
 
         {!isPending && !isError && (
